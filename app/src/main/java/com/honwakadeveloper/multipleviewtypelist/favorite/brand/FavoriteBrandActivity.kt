@@ -9,5 +9,11 @@ class FavoriteBrandActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_favorite_brand)
+
+        if (savedInstanceState == null) {
+            val transaction = supportFragmentManager.beginTransaction()
+            transaction.add(FavoriteBrandFragment.newInstance(), null)
+            transaction.commit()
+        }
     }
 }
