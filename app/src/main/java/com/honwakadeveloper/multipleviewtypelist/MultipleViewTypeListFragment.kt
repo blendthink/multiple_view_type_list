@@ -9,14 +9,14 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.honwakadeveloper.multipleviewtypelist.adapter.ContentItem
-import com.honwakadeveloper.multipleviewtypelist.adapter.FavoriteBrandAdapter
-import com.honwakadeveloper.multipleviewtypelist.adapter.FavoriteBrandItem
+import com.honwakadeveloper.multipleviewtypelist.adapter.MultipleViewTypeAdapter
+import com.honwakadeveloper.multipleviewtypelist.adapter.ListItem
 import com.honwakadeveloper.multipleviewtypelist.adapter.HeaderItem
 
 class MultipleViewTypeListFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
-    private lateinit var viewAdapter: FavoriteBrandAdapter
+    private lateinit var viewAdapter: MultipleViewTypeAdapter
     private lateinit var viewManager: GridLayoutManager
 
     companion object {
@@ -32,7 +32,7 @@ class MultipleViewTypeListFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_multiple_view_type_list, container, false)
 
-        val data: Array<FavoriteBrandItem> = arrayOf(
+        val data: Array<ListItem> = arrayOf(
             HeaderItem(),
             ContentItem(),
             ContentItem(),
@@ -82,15 +82,15 @@ class MultipleViewTypeListFragment : Fragment() {
 
                 val viewType = viewAdapter.getItemViewType(position)
 
-                return when (FavoriteBrandItem.type(viewType)) {
-                    FavoriteBrandItem.Type.HEADER -> 3
-                    FavoriteBrandItem.Type.CONTENT -> 1
+                return when (ListItem.type(viewType)) {
+                    ListItem.Type.HEADER -> 3
+                    ListItem.Type.CONTENT -> 1
                 }
             }
 
         }
 
-        viewAdapter = FavoriteBrandAdapter(data)
+        viewAdapter = MultipleViewTypeAdapter(data)
 
         recyclerView = view.findViewById<RecyclerView>(R.id.multiple_view_type_list_recycler_view).apply {
 

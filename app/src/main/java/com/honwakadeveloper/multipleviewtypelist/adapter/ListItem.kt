@@ -2,7 +2,7 @@ package com.honwakadeveloper.multipleviewtypelist.adapter
 
 import java.lang.RuntimeException
 
-abstract class FavoriteBrandItem {
+abstract class ListItem {
 
     companion object {
 

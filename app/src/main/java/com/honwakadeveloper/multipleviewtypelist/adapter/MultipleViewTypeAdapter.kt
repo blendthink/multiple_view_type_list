@@ -5,17 +5,17 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.honwakadeveloper.multipleviewtypelist.R
 
-class FavoriteBrandAdapter(
-    private val favoriteBrandItems: Array<FavoriteBrandItem>
+class MultipleViewTypeAdapter(
+    private val listItems: Array<ListItem>
 ) : RecyclerView.Adapter<FavoriteBrandViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavoriteBrandViewHolder {
 
         val inflater = LayoutInflater.from(parent.context)
 
-        return when (FavoriteBrandItem.type(viewType)) {
+        return when (ListItem.type(viewType)) {
 
-            FavoriteBrandItem.Type.HEADER -> {
+            ListItem.Type.HEADER -> {
                 HeaderViewHolder(
                     inflater.inflate(
                         R.layout.list_item_view_favorite_brand_header,
@@ -25,7 +25,7 @@ class FavoriteBrandAdapter(
                 )
             }
 
-            FavoriteBrandItem.Type.CONTENT -> {
+            ListItem.Type.CONTENT -> {
                 ContentViewHolder(
                     inflater.inflate(
                         R.layout.list_item_view_favorite_brand_content,
@@ -37,13 +37,13 @@ class FavoriteBrandAdapter(
         }
     }
 
-    override fun getItemCount() = favoriteBrandItems.size
+    override fun getItemCount() = listItems.size
 
     override fun onBindViewHolder(holder: FavoriteBrandViewHolder, position: Int) {
-        holder.bindView(favoriteBrandItems[position])
+        holder.bindView(listItems[position])
     }
 
     override fun getItemViewType(position: Int): Int {
-        return favoriteBrandItems[position].viewType()
+        return listItems[position].viewType()
     }
 }
