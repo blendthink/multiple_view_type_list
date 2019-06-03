@@ -83,8 +83,8 @@ class MultipleTypeListFragment : Fragment() {
                 val viewType = viewAdapter.getItemViewType(position)
 
                 return when (MultipleTypeListItem.type(viewType)) {
-                    MultipleTypeListItem.Type.HEADER -> 3
-                    MultipleTypeListItem.Type.CONTENT -> 1
+                    MultipleTypeListItem.Type.TYPE_A -> 3
+                    MultipleTypeListItem.Type.TYPE_B -> 1
                 }
             }
 

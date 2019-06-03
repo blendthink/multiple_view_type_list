@@ -15,20 +15,20 @@ class MultipleTypeListAdapter(
 
         return when (MultipleTypeListItem.type(viewType)) {
 
-            MultipleTypeListItem.Type.HEADER -> {
+            MultipleTypeListItem.Type.TYPE_A -> {
                 HeaderTypeListViewHolder(
                     inflater.inflate(
-                        R.layout.list_item_view_favorite_brand_header,
+                        R.layout.list_item_view_multiple_type_list_type_a,
                         parent,
                         false
                     )
                 )
             }
 
-            MultipleTypeListItem.Type.CONTENT -> {
+            MultipleTypeListItem.Type.TYPE_B -> {
                 ContentTypeListViewHolder(
                     inflater.inflate(
-                        R.layout.list_item_view_favorite_brand_content,
+                        R.layout.list_item_view_multiple_type_list_type_b,
                         parent,
                         false
                     )

@@ -16,8 +16,8 @@ abstract class MultipleTypeListItem {
     }
 
     enum class Type(val viewType: Int) {
-        HEADER(0),
-        CONTENT(1);
+        TYPE_A(0),
+        TYPE_B(1);
     }
 
     abstract val type : Type
