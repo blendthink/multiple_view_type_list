@@ -1,4 +1,4 @@
-package com.honwakadeveloper.multipleviewtypelist.favorite.brand.adapter
+package com.honwakadeveloper.multipleviewtypelist.adapter
 
 internal class ContentItem(
     override val type: Type = Type.CONTENT

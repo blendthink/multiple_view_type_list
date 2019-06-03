@@ -1,4 +1,4 @@
-package com.honwakadeveloper.multipleviewtypelist.favorite.brand
+package com.honwakadeveloper.multipleviewtypelist
 
 
 import android.os.Bundle
@@ -8,11 +8,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.honwakadeveloper.multipleviewtypelist.R
-import com.honwakadeveloper.multipleviewtypelist.favorite.brand.adapter.ContentItem
-import com.honwakadeveloper.multipleviewtypelist.favorite.brand.adapter.FavoriteBrandAdapter
-import com.honwakadeveloper.multipleviewtypelist.favorite.brand.adapter.FavoriteBrandItem
-import com.honwakadeveloper.multipleviewtypelist.favorite.brand.adapter.HeaderItem
+import com.honwakadeveloper.multipleviewtypelist.adapter.ContentItem
+import com.honwakadeveloper.multipleviewtypelist.adapter.FavoriteBrandAdapter
+import com.honwakadeveloper.multipleviewtypelist.adapter.FavoriteBrandItem
+import com.honwakadeveloper.multipleviewtypelist.adapter.HeaderItem
 
 class FavoriteBrandFragment : Fragment() {
 

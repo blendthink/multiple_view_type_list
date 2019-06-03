@@ -1,8 +1,7 @@
-package com.honwakadeveloper.multipleviewtypelist.favorite.brand
+package com.honwakadeveloper.multipleviewtypelist
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.honwakadeveloper.multipleviewtypelist.R
 
 class FavoriteBrandActivity : AppCompatActivity() {
 
@@ -12,7 +11,8 @@ class FavoriteBrandActivity : AppCompatActivity() {
 
         if (savedInstanceState == null) {
             val transaction = supportFragmentManager.beginTransaction()
-            transaction.add(R.id.fragment_container, FavoriteBrandFragment.newInstance(), null)
+            transaction.add(R.id.fragment_container,
+                FavoriteBrandFragment.newInstance(), null)
             transaction.commit()
         }
     }

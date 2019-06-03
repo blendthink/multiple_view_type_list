@@ -16,7 +16,7 @@
         android:theme="@style/AppTheme"
         android:fullBackupContent="@xml/backup_descriptor"
         >
-        <activity android:name=".favorite.brand.FavoriteBrandActivity">
+        <activity android:name=".FavoriteBrandActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <action android:name="android.intent.action.MAIN"/>
