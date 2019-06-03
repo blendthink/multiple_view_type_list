@@ -33,7 +33,7 @@ class MultipleTypeListFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_multiple_type_list, container, false)
 
         val data: Array<MultipleTypeListItem> = arrayOf(
-            TypeAListItem(),
+            TypeAListItem("Type A 1"),
             TypeBListItem(),
             TypeBListItem(),
             TypeBListItem(),
@@ -43,7 +43,7 @@ class MultipleTypeListFragment : Fragment() {
             TypeBListItem(),
             TypeBListItem(),
             TypeBListItem(),
-            TypeAListItem(),
+            TypeAListItem("Type A 2"),
             TypeBListItem(),
             TypeBListItem(),
             TypeBListItem(),

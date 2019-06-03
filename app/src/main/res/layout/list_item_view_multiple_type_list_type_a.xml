@@ -7,9 +7,9 @@
     >
 
     <TextView
+        android:id="@+id/title"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="Type A"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         android:gravity="center"
