@@ -13,15 +13,15 @@ import com.honwakadeveloper.multipleviewtypelist.adapter.FavoriteBrandAdapter
 import com.honwakadeveloper.multipleviewtypelist.adapter.FavoriteBrandItem
 import com.honwakadeveloper.multipleviewtypelist.adapter.HeaderItem
 
-class FavoriteBrandFragment : Fragment() {
+class MultipleViewTypeListFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var viewAdapter: FavoriteBrandAdapter
     private lateinit var viewManager: GridLayoutManager
 
     companion object {
-        fun newInstance(): FavoriteBrandFragment {
-            return FavoriteBrandFragment()
+        fun newInstance(): MultipleViewTypeListFragment {
+            return MultipleViewTypeListFragment()
         }
     }
 
@@ -30,7 +30,7 @@ class FavoriteBrandFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        val view = inflater.inflate(R.layout.fragment_favorite_brand, container, false)
+        val view = inflater.inflate(R.layout.fragment_multiple_view_type_list, container, false)
 
         val data: Array<FavoriteBrandItem> = arrayOf(
             HeaderItem(),
@@ -92,7 +92,7 @@ class FavoriteBrandFragment : Fragment() {
 
         viewAdapter = FavoriteBrandAdapter(data)
 
-        recyclerView = view.findViewById<RecyclerView>(R.id.favorite_brand_recycler_view).apply {
+        recyclerView = view.findViewById<RecyclerView>(R.id.multiple_view_type_list_recycler_view).apply {
 
             layoutManager = viewManager
 
