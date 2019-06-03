@@ -8,10 +8,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.honwakadeveloper.multipleviewtypelist.adapter.ContentTypeListItem
+import com.honwakadeveloper.multipleviewtypelist.adapter.TypeBListItem
 import com.honwakadeveloper.multipleviewtypelist.adapter.MultipleTypeListAdapter
 import com.honwakadeveloper.multipleviewtypelist.adapter.MultipleTypeListItem
-import com.honwakadeveloper.multipleviewtypelist.adapter.HeaderTypeListItem
+import com.honwakadeveloper.multipleviewtypelist.adapter.TypeAListItem
 
 class MultipleTypeListFragment : Fragment() {
 
@@ -33,47 +33,47 @@ class MultipleTypeListFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_multiple_type_list, container, false)
 
         val data: Array<MultipleTypeListItem> = arrayOf(
-            HeaderTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            HeaderTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem(),
-            ContentTypeListItem()
+            TypeAListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeAListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem(),
+            TypeBListItem()
         )
 
         viewManager = GridLayoutManager(context, 3)
