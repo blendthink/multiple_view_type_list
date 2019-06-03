@@ -1,6 +1,6 @@
 package com.honwakadeveloper.multipleviewtypelist.adapter
 
-import java.lang.RuntimeException
+import kotlin.RuntimeException
 
 abstract class MultipleTypeListItem {
 
@@ -10,13 +10,8 @@ abstract class MultipleTypeListItem {
 
             val types = Type.values()
 
-            types.forEach {
-                if (it.viewType == viewType) {
-                    return it
-                }
-            }
-
-            throw RuntimeException("Not Defined Type")
+            return types.firstOrNull { it.viewType == viewType }
+                ?: throw RuntimeException("Not Defined Type")
         }
     }
 
