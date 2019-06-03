@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.honwakadeveloper.multipleviewtypelist.R
 
 class FavoriteBrandAdapter(
-    private val favoriteBrandItems: List<FavoriteBrandItem>
+    private val favoriteBrandItems: Array<FavoriteBrandItem>
 ) : RecyclerView.Adapter<FavoriteBrandViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavoriteBrandViewHolder {
@@ -37,9 +37,7 @@ class FavoriteBrandAdapter(
         }
     }
 
-    override fun getItemCount(): Int {
-        return favoriteBrandItems.size
-    }
+    override fun getItemCount() = favoriteBrandItems.size
 
     override fun onBindViewHolder(holder: FavoriteBrandViewHolder, position: Int) {
         holder.bindView(favoriteBrandItems[position])

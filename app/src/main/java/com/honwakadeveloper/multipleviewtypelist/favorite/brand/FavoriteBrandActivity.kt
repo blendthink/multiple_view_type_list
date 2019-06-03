@@ -12,7 +12,7 @@ class FavoriteBrandActivity : AppCompatActivity() {
 
         if (savedInstanceState == null) {
             val transaction = supportFragmentManager.beginTransaction()
-            transaction.add(FavoriteBrandFragment.newInstance(), null)
+            transaction.add(R.id.fragment_container, FavoriteBrandFragment.newInstance(), null)
             transaction.commit()
         }
     }
