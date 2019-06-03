@@ -1,7 +1,7 @@
 package com.honwakadeveloper.multipleviewtypelist.adapter
 
-internal class HeaderItem(
+internal class HeaderTypeListItem(
     override val type: Type = Type.HEADER
-) : ListItem() {
+) : MultipleTypeListItem() {
 
 }

@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
 
         if (savedInstanceState == null) {
             val transaction = supportFragmentManager.beginTransaction()
-            transaction.add(R.id.fragment_container, MultipleViewTypeListFragment.newInstance(), null)
+            transaction.add(R.id.fragment_container, MultipleTypeListFragment.newInstance(), null)
             transaction.commit()
         }
     }

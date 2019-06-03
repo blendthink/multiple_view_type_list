@@ -5,18 +5,18 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.honwakadeveloper.multipleviewtypelist.R
 
-class MultipleViewTypeAdapter(
-    private val listItems: Array<ListItem>
-) : RecyclerView.Adapter<FavoriteBrandViewHolder>() {
+class MultipleTypeListAdapter(
+    private val multipleTypeListItems: Array<MultipleTypeListItem>
+) : RecyclerView.Adapter<MultipleTypeListViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavoriteBrandViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MultipleTypeListViewHolder {
 
         val inflater = LayoutInflater.from(parent.context)
 
-        return when (ListItem.type(viewType)) {
+        return when (MultipleTypeListItem.type(viewType)) {
 
-            ListItem.Type.HEADER -> {
-                HeaderViewHolder(
+            MultipleTypeListItem.Type.HEADER -> {
+                HeaderTypeListViewHolder(
                     inflater.inflate(
                         R.layout.list_item_view_favorite_brand_header,
                         parent,
@@ -25,8 +25,8 @@ class MultipleViewTypeAdapter(
                 )
             }
 
-            ListItem.Type.CONTENT -> {
-                ContentViewHolder(
+            MultipleTypeListItem.Type.CONTENT -> {
+                ContentTypeListViewHolder(
                     inflater.inflate(
                         R.layout.list_item_view_favorite_brand_content,
                         parent,
@@ -37,13 +37,13 @@ class MultipleViewTypeAdapter(
         }
     }
 
-    override fun getItemCount() = listItems.size
+    override fun getItemCount() = multipleTypeListItems.size
 
-    override fun onBindViewHolder(holder: FavoriteBrandViewHolder, position: Int) {
-        holder.bindView(listItems[position])
+    override fun onBindViewHolder(holder: MultipleTypeListViewHolder, position: Int) {
+        holder.bindView(multipleTypeListItems[position])
     }
 
     override fun getItemViewType(position: Int): Int {
-        return listItems[position].viewType()
+        return multipleTypeListItems[position].viewType()
     }
 }

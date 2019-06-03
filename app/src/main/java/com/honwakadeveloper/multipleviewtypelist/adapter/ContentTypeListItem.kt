@@ -1,7 +1,7 @@
 package com.honwakadeveloper.multipleviewtypelist.adapter
 
-internal class ContentItem(
+internal class ContentTypeListItem(
     override val type: Type = Type.CONTENT
-) : ListItem() {
+) : MultipleTypeListItem() {
 
 }
